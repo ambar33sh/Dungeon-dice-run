@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dungeon Dice Run: The Cursed Catacombs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Dungeon Dice Run: The Cursed Catacombs</h1>
+    <p class="story">
+      You are trapped in the cursed Catacombs of Vorthan. Roll the dice, move through
+      the dungeon, find treasure, avoid traps, and try to escape alive!
+    </p>
+
+    <div class="stats">
+      <div>Position: <span id="pos">1</span> / 30</div>
+      <div>Hearts: <span id="hearts">5</span> ❤️</div>
+      <div>Treasure: <span id="treasure">0</span> 💰</div>
+      <div>Status: <span id="status">Roll the dice to begin.</span></div>
+    </div>
+
+    <div class="controls">
+      <button id="rollBtn">🎲 Roll Dice</button>
+      <button id="lowerBtn" disabled>Move Lower</button>
+      <button id="higherBtn" disabled>Move Higher</button>
+      <button id="resetBtn">Reset Game</button>
+    </div>
+
+    <div class="dice-display">
+      Dice: <span id="diceValues">-</span>
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <div class="legend">
+      <h2>Legend</h2>
+      <p><span class="cell treasure"></span> Treasure (+1 💰)</p>
+      <p><span class="cell trap"></span> Trap (-1 ❤️)</p>
+      <p><span class="cell monster"></span> Monster (roll: 1–3 = -1 ❤️, 4–6 = +1 💰)</p>
+      <p><span class="cell potion"></span> Potion (+1 ❤️, max 5)</p>
+      <p><span class="cell start"></span> Start &nbsp; <span class="cell exit"></span> Exit</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
